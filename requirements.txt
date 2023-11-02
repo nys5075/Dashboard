@@ -2,4 +2,4 @@ pandas
 streamlit
 joblib
 matplotlib
-sklearn
+scikit-learn
