@@ -17,8 +17,19 @@ time_series=pd.read_csv('forecast_prophet_data.csv')
 min_max_scaler=joblib.load('min_max_scaler_grid.joblib')
 rf_model=joblib.load('rf_grid_best_model.pkl')
 
-files=os.listdir()
-pkl_files=[file for file in files if file.endswith('.pkl')]
+# files=os.listdir()
+# pkl_files=[file for file in files if file.endswith('.pkl')]
+
+pkl_files=['one_hot_encoder_age_group.pkl',
+ 'one_hot_encoder_ethnicity.pkl',
+ 'one_hot_encoder_exposure_yn.pkl',
+ 'one_hot_encoder_hosp_yn.pkl',
+ 'one_hot_encoder_icu_yn.pkl',
+ 'one_hot_encoder_month.pkl',
+ 'one_hot_encoder_race.pkl',
+ 'one_hot_encoder_sex.pkl',
+ 'one_hot_encoder_underlying_conditions_yn.pkl',
+ 'rf_grid_best_model.pkl']
 
 #Get all the columns that need encoded
 columns_encoded=['age_group','sex','race','ethnicity','exposure_yn','hosp_yn','icu_yn','underlying_conditions_yn','month']
@@ -178,3 +189,4 @@ if st.button('Run Forecast'):
 
         
 #cd C:\Users\Nick\Desktop\DAAN888\Dashboard
+# cd C:\Users\Nick\Desktop\DAAN888\repo
